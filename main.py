@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 import re
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
-
+print("🔍 DATABASE_URL:", DATABASE_URL)  # ← Esta línea es clave
 def init_db():
     try:
         conn = psycopg2.connect(DATABASE_URL)
